@@ -1,0 +1,7 @@
+source ~/env/bin/activate
+export PYTHONPATH=~/env/lib/python3.7/site-packages:$PYTHONPATH
+
+module load python3/3.7.4
+cd ${WorkDir}PythonMPI/
+
+python3 Eigen_DataPrepMPI.py $P0 $ScratchPath

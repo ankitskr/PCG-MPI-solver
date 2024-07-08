@@ -1,0 +1,26 @@
+source ~/env/bin/activate
+export PYTHONPATH=~/env/lib/python3.7/site-packages:$PYTHONPATH
+module load python3/3.7.4
+module load openmpi/4.0.1
+cd ${WorkDir}PythonMPI/
+
+
+start=$(date +%s.%N)
+NProc=$((2**$P0))
+
+#mpiexec -np $NProc python3 Explicit_Analysis.py $ModelName $ScratchPath $R0 $SpeedTestFlag $PBS_JOBID
+
+if (($NProc<=1))
+then
+    mpiexec -np $NProc --map-by core python3 Explicit_Analysis.py $ModelName $ScratchPath $R0 $SpeedTestFlag $PBS_JOBID
+else
+    MyHostFile=HostFiles/$PBS_JOBID
+    uniq $PBS_NODEFILE > $MyHostFile
+    python HostFileGen.py $MyHostFile $NProc
+    mpiexec -hostfile $MyHostFile -np $NProc --map-by socket python3 Explicit_Analysis.py $ModelName $ScratchPath $R0 $SpeedTestFlag $PBS_JOBID
+    rm $MyHostFile
+fi
+
+end=$(date +%s.%N)    
+runtime=$(python -c "print(${end} - ${start})")
+echo "Walltime is $runtime"

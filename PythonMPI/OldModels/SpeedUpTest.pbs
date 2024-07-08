@@ -1,0 +1,19 @@
+source ~/env/bin/activate
+export PYTHONPATH=~/env/lib/python3.7/site-packages:$PYTHONPATH
+module load python3/3.7.4
+module load openmpi/4.0.1
+cd ${WorkDir}PythonMPI/
+
+NProc=$((2**$P0))
+
+if (($NProc<=24))
+then
+    mpiexec -np $NProc --map-by core python SpeedUpTest.py $ModelName $ScratchPath $MeshSizeFac $Run
+else
+	MyHostFile=HostFiles/$PBS_JOBID
+	uniq $PBS_NODEFILE > $MyHostFile
+	python HostFileGen.py $MyHostFile $NProc
+	mpiexec -hostfile $MyHostFile -np $NProc --map-by socket python SpeedUpTest.py $ModelName $ScratchPath $MeshSizeFac $Run
+	rm $MyHostFile
+fi
+
