@@ -1,0 +1,5 @@
+1. The article titled "An octree pattern-based massively parallel PCG solver for elasto-static and dynamic problems" provides a detailed information on numerical techniques and solver algorithm employed in this project.
+Article link: https://doi.org/10.1016/j.cma.2022.115779
+
+2. An extension of this work can be found in the PhD thesis titile "High-Performance Computing for Impact-Induced Fracture Analysis exploiting Octree Mesh Patterns".
+Thesis link: https://doi.org/10.26190/unsworks/22788

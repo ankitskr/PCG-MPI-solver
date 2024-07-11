@@ -1,8 +1,14 @@
-## Project description
-This is an mpi-based parallel pcg solver.
+# PCG-MPI-solver
+
+## Project Description
+This is an MPI-based parallel Preconditioned Conjugate Gradient (PCG) solver. The solver has been tested on the Gadi supercomputer using approximately 12,000 cores for parallel processing.
+
 
 ## Installation
-To setup this project on a supercomputing cluster, follow these steps:
+
+### On Gadi Supercomputer
+The following steps outline how to install the necessary libraries and dependencies on the Gadi supercomputer at NCI, Canberra:
+
 ```shell
 cd ~
 module load python3/3.11.0
@@ -12,32 +18,59 @@ source ~/env_MPI/bin/activate
 python3 -m pip install mpi4py mgmetis jupyter
 ```
 
+### On a Local Workstation
+To run the code on a local workstation, ensure you have the following installed:
 
-## Usage
-To use this project, first setup the environment:
+- Python 3
+- Open-MPI
+- Python libraries: numpy, scipy, matplotlib, Cython, mpi4py, mgmetis, jupyter
+
+You can install the required Python libraries using pip:
+
 ```shell
-module load python3/3.11.0
-source ~/env_MPI/bin/activate
-export PYTHONPATH=~/env_MPI/lib/python3.11/site-packages:$PYTHONPATH
+pip install numpy scipy matplotlib Cython mpi4py mgmetis jupyter
 ```
 
-Save the repository "PCG_MPI_Solver" in the home folder of desktop system or supercomputing cluster.
+## Usage
+
+### Running the Solver
+1. Save the repository "PCG_MPI_Solver" in your home directory and set it as the working directory:
 ```shell
 cd ~/PCG_MPI_Solver
 ```
 
-Then, execute the bash file to test run the solver.
+2. Execute the bash file to set up the environment and test run the solver:
 ```shell
-bash scripts/run_script.bash
+bash examples/run_basic_script.bash
+```
+
+3. Alternatively, setup the environment as follows and then run the jupyter notebook.
+```shell
+module load python3/3.11.0
+source ~/env_MPI/bin/activate
+export PYTHONPATH=~/env_MPI/lib/python3.11/site-packages:$PYTHONPATH
+jupyter nbconvert --execute --clear-output notebooks/solver_demo.ipynb
 ```
 
 ## Working demonstration
-
-A working demonstration for an example problem is provided in a jupyter notebook.
+A working demonstration of this code for an example problem is provided in the jupyter notebook.
 Refer to notebooks/solver_demo.ipynb
 
 ## Documentation
+1. For detailed information on the numerical techniques and solver algorithms employed in this project, refer to the article:
+
+- **Title:** "An octree pattern-based massively parallel PCG solver for elasto-static and dynamic problems"
+- **Link:** [Article on Computer Methods in Applied Mechanics and Engineering](https://doi.org/10.1016/j.cma.2022.115779)
+
+2. Additional details can be found in the PhD thesis:
+
+- **Title:** "High-Performance Computing for Impact-Induced Fracture Analysis exploiting Octree Mesh Patterns"
+- **Link:** [PhD Thesis](https://doi.org/10.26190/unsworks/22788)
 
 
 ## Citation
 If you use this code in a scientific publication, please cite the following paper:
+
+Ankit A, Zhang J, Eisenträger S, Song C. An octree pattern-based massively 
+parallel PCG solver for elasto-static and dynamic problems. Computer Methods 
+in Applied Mechanics and Engineering. 2023 Feb 1;404:115779.

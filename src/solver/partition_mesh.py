@@ -2,7 +2,7 @@
 """
 Created on Tue Apr 14 17:45:13 2020
 
-@author: z5166762
+@author: Ankit Kumar
 """
 
 import numpy as np
@@ -23,7 +23,7 @@ from os import listdir
 from os.path import isfile, join
 import gc
 from scipy.sparse import csr_matrix
-from file_operations import loadBinDataInSharedMem
+from src.utils.file_operations import loadBinDataInSharedMem
 from time import time, sleep
 
 

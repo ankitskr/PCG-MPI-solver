@@ -2,7 +2,7 @@
 """
 Created on Tue Apr 14 17:45:13 2020
 
-@author: z5166762
+@author: Ankit Kumar
 """
 
 import numpy as np
@@ -14,7 +14,7 @@ from os.path import isfile, join
 import pickle
 import zlib
 from time import time
-from file_operations import loadBinDataInSharedMem 
+from src.utils.file_operations import loadBinDataInSharedMem 
 
 def config_GlobData(MDF_Path, MeshData_Glob_FileName):
     

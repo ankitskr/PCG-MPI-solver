@@ -2,7 +2,7 @@
 """
 Created on Wed Mar 11 15:10:24 2020
 
-@author: z5166762
+@author: Ankit Kumar
 """
 
 import os
@@ -31,7 +31,7 @@ from mpi4py import MPI
 
 #from Cython_Array.Array_cy import updateLocFint, apply_sum
 from scipy.io import savemat
-from file_operations import configTimeRecData, getPrincipalStrain, getPrincipalStress, GaussLobattoIntegrationTable, GaussIntegrationTable, readMPIFile, readMPIFile_parallel, writeMPIFile_parallel, importz
+from src.utils.file_operations import configTimeRecData, getPrincipalStrain, getPrincipalStress, GaussLobattoIntegrationTable, GaussIntegrationTable, readMPIFile, readMPIFile_parallel, writeMPIFile_parallel, importz
 from scipy.interpolate import interp1d, interp2d
 
 
