@@ -1,5 +1,5 @@
 ## Project description
-
+This is an mpi-based parallel pcg solver.
 
 ## Installation
 To install this project, follow these steps:
@@ -22,12 +22,12 @@ export PYTHONPATH=~/env_MPI/lib/python3.11/site-packages:$PYTHONPATH
 cd ~/PCG_MPI_Solver
 ```
 Then, to test run, you can choose one of the following options
-### 1. Run bash file
+#### 1. Run bash file
 ```shell
 bash run_script.bash
 ```
 
-### 2. Run jupyter notebook
+#### 2. Run jupyter notebook
 ```shell
 jupyter nbconvert --execute --clear-output solver_demo.ipynb
 ```
