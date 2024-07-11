@@ -5,9 +5,12 @@ module load python3/3.11.0
 module load openmpi/4.0.5
 
 
-export n_meshparts=8
-export work_dir=~/PCG_MPI
+
+export work_dir=~/PCG_MPI_Solver
 cd $work_dir
+
+
+export n_meshparts=8
 
 
 export model_name=Concrete
@@ -44,7 +47,7 @@ GlobSettings = {'TimeHistoryParam':TimeHistoryParam,
 exportz('__pycache__/GlobSettings.zpkl', GlobSettings)
 "
 
-mpiexec -np $n_meshparts --map-by numa python3 pcg_mpi_solver.py 1 0
+mpiexec -np $n_meshparts --map-by numa python3 pcg_solver.py 1 0
 
 
 mpiexec -np 1 python3 export_vtk.py 1 "U" "Full"
