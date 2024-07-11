@@ -2,8 +2,7 @@
 This is an mpi-based parallel pcg solver.
 
 ## Installation
-To install this project, follow these steps:
-
+To setup this project on a supercomputing cluster, follow these steps:
 ```shell
 cd ~
 module load python3/3.11.0
@@ -13,24 +12,32 @@ source ~/env_MPI/bin/activate
 python3 -m pip install mpi4py mgmetis jupyter
 ```
 
+
 ## Usage
 To use this project, first setup the environment:
 ```shell
 module load python3/3.11.0
 source ~/env_MPI/bin/activate
 export PYTHONPATH=~/env_MPI/lib/python3.11/site-packages:$PYTHONPATH
-cd ~/PCG_MPI_Solver
-```
-Then, to test run, you can choose one of the following options
-#### 1. Run bash file
-```shell
-bash run_script.bash
 ```
 
-#### 2. Run jupyter notebook
+Save the repository "PCG_MPI_Solver" in the home folder of desktop system or supercomputing cluster.
 ```shell
-jupyter nbconvert --execute --clear-output solver_demo.ipynb
+cd ~/PCG_MPI_Solver
 ```
+
+Then, execute the bash file to test run the solver.
+```shell
+bash scripts/run_script.bash
+```
+
+## Working demonstration
+
+A working demonstration for an example problem is provided in a jupyter notebook.
+Refer to notebooks/solver_demo.ipynb
+
+## Documentation
+
 
 ## Citation
 If you use this code in a scientific publication, please cite the following paper:
