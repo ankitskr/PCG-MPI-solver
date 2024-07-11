@@ -1,4 +1,7 @@
-#Setup
+## Project description
+
+
+## Environment Setup
 
 $cd ~
 $module load python3/3.11.0
