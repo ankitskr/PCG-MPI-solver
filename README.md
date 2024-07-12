@@ -62,9 +62,9 @@ Refer to [notebooks/solver_demo.ipynb](https://github.com/ankitskr/PCG-MPI-solve
 
 
 ## Project structure
-Below is the folder structure of the PCG_MPI_Solver project, outlining the main directories and their contents:
+Below is the folder structure of the project, outlining the main directories and their contents:
 ```
-PCG_MPI_Solver/
+PCG-MPI-solver/
 ├── .gitignore                  
 ├── LICENSE                     # Contains the licensing agreement for the project
 ├── README.md                   # Provides a detailed description of the project
