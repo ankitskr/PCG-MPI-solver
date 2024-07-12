@@ -56,7 +56,7 @@ jupyter nbconvert --execute --clear-output notebooks/solver_demo.ipynb
 
 ## Working demonstration
 A working demonstration of this code for an example problem is provided in the jupyter notebook.
-Refer to notebooks/solver_demo.ipynb
+Refer to [notebooks/solver_demo.ipynb](https://github.com/ankitskr/PCG-MPI-solver/blob/main/notebooks/solver_demo.ipynb)
 
 ## Documentation
 1. For detailed information on the numerical techniques and solver algorithms employed in this project, refer to the article:
