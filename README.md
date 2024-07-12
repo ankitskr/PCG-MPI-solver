@@ -34,6 +34,38 @@ You can install the required Python libraries using pip:
 pip install numpy scipy matplotlib Cython mpi4py mgmetis jupyter
 ```
 
+## Project structure
+
+```
+PCG_MPI_Solver/
+├── .gitignore                  
+├── LICENSE                     # Contains the licensing agreement for the project
+├── README.md                   # Provides a detailed description of the project
+├── data/                       
+│   └── concrete.zip            # Model data used by the project for demonstration
+├── docs/
+│   └── references.txt          # Documentation and references related to the project
+├── examples/
+│   └── run_basic_script.bash   # Bash script for running a basic example of the solver
+├── notebooks/
+│   ├── setup_env.sh            # Shell script for setting up the environment
+│   ├── solver_demo.ipynb       # Jupyter notebook demonstrating the solver's usage
+│   └── images/                 # Directory containing images used in notebooks
+├── scripts/
+│   └── install.bash            # Script to automate the installation of dependencies
+└── src/
+    ├── solver/                 # Core directory for the solver's algorithms
+    │   ├── partition_mesh.py   # Script for mesh partitioning
+    │   ├── pcg_solver.py       # Script for the preconditioned conjugate gradient solver
+    │   └── run_metis.py        # Script to run METIS for mesh partitioning
+    ├── utils/                  # Utility scripts for the project
+    │   └── file_operations.py  # Script to handle file operations
+    └── data/
+        ├── export_vtk.py       # Script to export data in VTK format
+        ├── read_input_model.py # Script to read the input model from files
+        └── evtk/               # EVTK library to convert data in VTK format
+```
+
 ## Usage
 
 1. Save the repository "PCG_MPI_Solver" in your home directory and set it as the working directory:
@@ -57,6 +89,7 @@ jupyter nbconvert --execute --clear-output notebooks/solver_demo.ipynb
 ## Working demonstration
 A working demonstration of this code for an example problem is provided in the jupyter notebook.
 Refer to [notebooks/solver_demo.ipynb](https://github.com/ankitskr/PCG-MPI-solver/blob/main/notebooks/solver_demo.ipynb)
+
 
 ## Documentation
 1. For detailed information on the numerical techniques and solver algorithms employed in this project, refer to the article:
