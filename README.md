@@ -34,8 +34,35 @@ You can install the required Python libraries using pip:
 pip install numpy scipy matplotlib Cython mpi4py mgmetis jupyter
 ```
 
-## Project structure
 
+## Usage
+
+1. Save the repository "PCG_MPI_Solver" in your home directory and set it as the working directory:
+```shell
+cd ~/PCG_MPI_Solver
+```
+
+2. Execute the bash file to set up the environment and test run the solver:
+```shell
+bash examples/run_basic_script.bash
+```
+
+3. Alternatively, setup the environment as follows and run the jupyter notebook.
+```shell
+module load python3/3.11.0
+source ~/env_MPI/bin/activate
+export PYTHONPATH=~/env_MPI/lib/python3.11/site-packages:$PYTHONPATH
+jupyter nbconvert --execute --clear-output notebooks/solver_demo.ipynb
+```
+
+## Working demonstration
+A working demonstration of this code for an example problem is provided in the jupyter notebook.
+Refer to [notebooks/solver_demo.ipynb](https://github.com/ankitskr/PCG-MPI-solver/blob/main/notebooks/solver_demo.ipynb)
+
+
+
+## Project structure
+Below is the folder structure of the PCG_MPI_Solver project, outlining the main directories and their contents:
 ```
 PCG_MPI_Solver/
 ├── .gitignore                  
@@ -65,30 +92,6 @@ PCG_MPI_Solver/
         ├── read_input_model.py # Script to read the input model from files
         └── evtk/               # EVTK library to convert data in VTK format
 ```
-
-## Usage
-
-1. Save the repository "PCG_MPI_Solver" in your home directory and set it as the working directory:
-```shell
-cd ~/PCG_MPI_Solver
-```
-
-2. Execute the bash file to set up the environment and test run the solver:
-```shell
-bash examples/run_basic_script.bash
-```
-
-3. Alternatively, setup the environment as follows and run the jupyter notebook.
-```shell
-module load python3/3.11.0
-source ~/env_MPI/bin/activate
-export PYTHONPATH=~/env_MPI/lib/python3.11/site-packages:$PYTHONPATH
-jupyter nbconvert --execute --clear-output notebooks/solver_demo.ipynb
-```
-
-## Working demonstration
-A working demonstration of this code for an example problem is provided in the jupyter notebook.
-Refer to [notebooks/solver_demo.ipynb](https://github.com/ankitskr/PCG-MPI-solver/blob/main/notebooks/solver_demo.ipynb)
 
 
 ## Documentation
