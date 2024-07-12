@@ -9,7 +9,7 @@ The Message Passing Interface (MPI) is a standardized and portable message-passi
 
 ## Installation
 
-### On Gadi Supercomputer
+#### On Gadi Supercomputer
 The following steps outline how to install the necessary libraries and dependencies on the Gadi supercomputer at NCI, Canberra:
 
 ```shell
@@ -21,7 +21,7 @@ source ~/env_MPI/bin/activate
 python3 -m pip install mpi4py mgmetis jupyter
 ```
 
-### On a Local Workstation
+#### On a Local Workstation
 To run the code on a local workstation, ensure you have the following installed:
 
 - Python 3
