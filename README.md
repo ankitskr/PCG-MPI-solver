@@ -5,6 +5,7 @@ This is an MPI-based parallel Preconditioned Conjugate Gradient (PCG) solver. Th
 
 The PCG is an algorithm for the numerical solution of systems of linear equations (**Ax=b**) with positive-semidefinite system matrix (**A**). The method can also be used to solve unconstrained optimization problems such as energy minimization.
 
+The Message Passing Interface (MPI) is a standardized, portable message-passing system designed to perform efficient parallel computing on distributed computing architectures.
 
 ## Installation
 
