@@ -60,7 +60,6 @@ A working demonstration of this code for an example problem is provided in the j
 Refer to [notebooks/solver_demo.ipynb](https://github.com/ankitskr/PCG-MPI-solver/blob/main/notebooks/solver_demo.ipynb)
 
 
-
 ## Project structure
 Below is the folder structure of the project, outlining the main directories and their contents:
 ```
@@ -71,7 +70,7 @@ PCG-MPI-solver/
 ├── data/                       
 │   └── concrete.zip            # Model data used by the project for demonstration
 ├── docs/
-│   └── references.txt          # Documentation and references related to the project
+│   └── references.txt          # References related to the project
 ├── examples/
 │   └── run_basic_script.bash   # Bash script for running a basic example of the solver
 ├── notebooks/
@@ -94,7 +93,7 @@ PCG-MPI-solver/
 ```
 
 
-## Documentation
+## References
 1. For detailed information on the numerical techniques and solver algorithms employed in this project, refer to the article:
 
 - **Title:** "An octree pattern-based massively parallel PCG solver for elasto-static and dynamic problems"
