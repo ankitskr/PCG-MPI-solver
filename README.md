@@ -1,7 +1,9 @@
 # PCG-MPI-solver
 
 ## Project Description
-This is an MPI-based parallel Preconditioned Conjugate Gradient (PCG) solver. The solver has been tested on the Gadi supercomputer using approximately 12,000 cores for parallel processing.
+This is an MPI-based parallel Preconditioned Conjugate Gradient (PCG) solver. The solver has been tested on the Gadi supercomputer using approximately 12,000 cores for solving linear elastostatic problems with over 1 billion unknowns (dofs).
+
+The PCG is an algorithm for the numerical solution of systems of linear equations (**Ax=b**) with positive-semidefinite system matrix (**A**). The method can also be used to solve unconstrained optimization problems such as energy minimization.
 
 
 ## Installation
@@ -33,7 +35,6 @@ pip install numpy scipy matplotlib Cython mpi4py mgmetis jupyter
 
 ## Usage
 
-### Running the Solver
 1. Save the repository "PCG_MPI_Solver" in your home directory and set it as the working directory:
 ```shell
 cd ~/PCG_MPI_Solver
@@ -44,7 +45,7 @@ cd ~/PCG_MPI_Solver
 bash examples/run_basic_script.bash
 ```
 
-3. Alternatively, setup the environment as follows and then run the jupyter notebook.
+3. Alternatively, setup the environment as follows and run the jupyter notebook.
 ```shell
 module load python3/3.11.0
 source ~/env_MPI/bin/activate
@@ -60,12 +61,12 @@ Refer to notebooks/solver_demo.ipynb
 1. For detailed information on the numerical techniques and solver algorithms employed in this project, refer to the article:
 
 - **Title:** "An octree pattern-based massively parallel PCG solver for elasto-static and dynamic problems"
-- **Link:** [Article on Computer Methods in Applied Mechanics and Engineering](https://doi.org/10.1016/j.cma.2022.115779)
+- **Link:** [Article - Computer Methods in Applied Mechanics and Engineering](https://doi.org/10.1016/j.cma.2022.115779)
 
 2. Additional details can be found in the PhD thesis:
 
 - **Title:** "High-Performance Computing for Impact-Induced Fracture Analysis exploiting Octree Mesh Patterns"
-- **Link:** [PhD Thesis](https://doi.org/10.26190/unsworks/22788)
+- **Link:** [PhD Thesis - UNSW Sydney](https://doi.org/10.26190/unsworks/22788)
 
 
 ## Citation
