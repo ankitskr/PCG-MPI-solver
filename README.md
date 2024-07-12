@@ -1,7 +1,7 @@
 # PCG-MPI-solver
 
 ## Project Description
-This is an MPI-based parallel Preconditioned Conjugate Gradient (PCG) solver. The solver has been tested on the Gadi supercomputer using approximately 12,000 cores for solving linear elastostatic problems with over 1 billion unknowns (dofs).
+This project implements an MPI-based parallel Preconditioned Conjugate Gradient (PCG) solver. The solver has been tested on the Gadi supercomputer using approximately 12,000 cores for solving linear elastostatic problems with over 1 billion unknowns (dofs).
 
 The PCG is an algorithm for the numerical solution of systems of linear equations (**Ax=b**) with positive-semidefinite system matrix (**A**). The method can also be used to solve unconstrained optimization problems such as energy minimization.
 
