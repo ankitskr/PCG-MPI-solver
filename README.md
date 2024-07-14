@@ -1,11 +1,13 @@
 # PCG-MPI-solver
 
 ## Project Description
-This project develops an MPI-based parallel Preconditioned Conjugate Gradient (PCG) solver. The solver has been tested on the Gadi supercomputer using approximately 12,000 cores for solving linear elastostatic problems with over 1 billion unknowns (dofs).
+This project develops an MPI-based parallel Preconditioned Conjugate Gradient (PCG) solver. The solver has been tested on the Gadi supercomputer using approximately 12,000 cores for solving sparse linear systems with over 1 billion unknowns (dofs).
 
 The PCG is an algorithm for the numerical solution of systems of linear equations (**Ax=b**) with positive-semidefinite system matrix (**A**). The method can also be used to solve unconstrained optimization problems such as energy minimization.
 
-The Message Passing Interface (MPI) is a standardized and portable message-passing system, designed for developing efficient parallel codes on distributed computing architectures.
+The Message Passing Interface (MPI) is a standardized and portable message-passing system that enables the development of efficient parallel codes on distributed computing architectures.
+
+In this project, the PCG-MPI solver has been applied to solve a fundamental problem in computational solid mechanics - Linear Elastostatics - showcasing its robust capabilities in practical applications.
 
 ## Installation
 
